@@ -1,50 +1,76 @@
-# Bank-Credit-Card-Analysis
+# AtliQo Bank - A/B Test Analysis (Phase 2)
 
-This project is a statistical analysis of an A/B test campaign conducted by AtliQo Bank. It serves as Phase 2, following the initial target market identification (18-25 age group) from Phase 1.
+A statistical analysis of an A/B test campaign conducted by AtliQo Bank. This project is Phase 2 of the analysis, following Phase 1, which identified the **18–25 age group** as the target market.
 
-Objective
-The objective of this analysis is to statistically determine if the new credit card, which was marketed to the target "test group," successfully increased their average transaction amount compared to the "control group".
+## Objective
 
-Methodology: Hypothesis Testing
-A one-tailed z-test for two independent samples was used to compare the means of the two groups.
+The objective is to determine whether the new credit card marketing campaign **increased the average transaction amount** among the target 18–25 age group compared with the control group.
 
-Null Hypothesis (
-H
-0
-): The average transaction amount of the test group is less than or equal to the average transaction amount of the control group.
-Alternative Hypothesis (
-H
-1
-): The average transaction amount of the test group is greater than the average transaction amount of the control group.
-Significance Level (
-α
-): 0.05 (or 5%).
-Data
-The analysis uses the avg_transactions_after_campaign.csv file, which contains the daily average transaction amounts for both the control group and the test group (the 18-25 age market) after the campaign launch.
+## Methodology
 
-Visualizing the Distributions
-Below are the distributions of the average transaction amounts for both the control and test groups. This visualization helps to intuitively understand the difference in means that the hypothesis test quantifies.
+A **one-tailed z-test for two independent samples** was used to compare the average transaction amounts of the test and control groups.
 
-Distribution of Control and Test Group Transaction Amounts
+### Hypotheses
 
-Results & Conclusion
-The statsmodels.stats.ztest was performed to get the test statistic and p-value.
+* **Null Hypothesis (H₀):** The average transaction amount of the test group is less than or equal to the control group.
+* **Alternative Hypothesis (H₁):** The average transaction amount of the test group is greater than the control group.
+* **Significance Level (α):** 0.05 (5%)
 
-Z-statistic: 2.748
-P-value: 0.00299
-Conclusion: Reject the Null Hypothesis.
+## Data
 
-Since the p-value (0.00299) is less than the significance level (0.05), we reject the null hypothesis. The results are statistically significant, and we can conclude that the marketing campaign for the new credit card successfully increased the average transaction amount for the 18-25 age group.
+The analysis uses `avg_transactions_after_campaign.csv`, which contains the daily average transaction amounts for both the control group and the test group after the campaign launch.
 
-Technologies Used
-Python
-Jupyter Notebook
-Pandas: For data loading and manipulation.
-Statsmodels: For performing the one-tailed z-test.
-Matplotlib & Seaborn: For data visualization.
-How to Run This Project
-Clone the repository.
-Install the required libraries:
+## Analysis
+
+The transaction distributions of the control and test groups were visualized using **Matplotlib and Seaborn** to understand the difference in their distributions and average transaction amounts.
+
+The hypothesis test was then performed using `statsmodels.stats.ztest`.
+
+## Results
+
+* **Z-statistic:** 2.748
+* **P-value:** 0.00299
+* **Significance Level:** 0.05
+
+Since the **p-value (0.00299) is less than 0.05**, the null hypothesis is rejected.
+
+### Conclusion
+
+The results are statistically significant and provide evidence that the new credit card marketing campaign **increased the average transaction amount among customers in the 18–25 age group** compared with the control group.
+
+## Technologies Used
+
+* **Python** — Statistical analysis and data processing
+* **Jupyter Notebook** — Analysis environment
+* **Pandas** — Data loading and manipulation
+* **Statsmodels** — One-tailed z-test
+* **Matplotlib** — Data visualization
+* **Seaborn** — Distribution visualization
+
+## How to Run
+
+### 1. Clone the repository
+
+```bash
+git clone <your-repository-url>
+cd <repository-folder>
+```
+
+### 2. Install the required libraries
+
+```bash
 pip install pandas statsmodels matplotlib seaborn jupyterlab
-Ensure the avg_transactions_after_campaign.csv data file is in the same directory as the notebook.
-Run the Testing for new Credit Card.ipynb file using JupyterLab or Jupyter Notebook.
+```
+
+### 3. Add the dataset
+
+Ensure `avg_transactions_after_campaign.csv` is present in the same directory as the notebook.
+
+### 4. Run the notebook
+
+Open `Testing for new Credit Card.ipynb` using Jupyter Notebook or JupyterLab and run the cells.
+
+## Key Takeaway
+
+This project demonstrates how **hypothesis testing and statistical significance** can be used to evaluate the effectiveness of a marketing campaign and support data-driven business decisions.
+
